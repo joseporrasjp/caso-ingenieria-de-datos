@@ -28,19 +28,21 @@ La solución fue desarrollada de forma local y probada exitosamente en el siguie
 - **omegaconf**
 
 ## Flujo de Trabajo
-
 ```mermaid
 graph LR
     %% Nodos Principales
-    Input[Entrada CSV] --> Filtro(Filtros)
-    Filtro --> Transformacion(Transformación y Limpieza)
-    Transformacion --> Salida[Generación de Archivo Parquet]
+    Bronze[Input: Datos Crudos CSV] --> ETL(Proceso ETL: Limpieza y Reglas)
+    ETL --> Silver[Salida: Capa Silver]
 
-    %% Detalles de Salida
-    Salida -.-> Parquet[(Parquet)]
-    Salida -.-> CSV[(CSV)]
+    %% Detalles Técnicos de la Salida
+    Silver -.-> Formato[Formato: Parquet y CSV]
+    Silver -.-> Estrategia[Particionado por fecha]
 
-    %% Estilos simples para que se vea limpio
-    style Input fill:#fff,stroke:#333,stroke-width:2px
-    style Transformacion fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    style Salida fill:#dcedc8,stroke:#33691e,stroke-width:2px
+    %% Estilos Definidos (Letra negra, Negrita, Borde grueso negro)
+    style Bronze fill:#f5f5f5,stroke:#000000,stroke-width:3px,color:#000000,font-weight:bold
+    style ETL fill:#e1f5fe,stroke:#000000,stroke-width:3px,color:#000000,font-weight:bold
+    style Silver fill:#e0f2f1,stroke:#000000,stroke-width:3px,color:#000000,font-weight:bold
+    
+    %% Estilo para los nodos secundarios (para que también tengan letra negra)
+    style Formato fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
+    style Estrategia fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
