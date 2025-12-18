@@ -1,0 +1,21 @@
+# config/config.yaml
+input:
+  file_path: "../data/input/data_entrega_productos.csv"
+
+filters:
+  start_date: 20250101
+  end_date: 20250630
+  country: "GT"
+  date_format: "yyyyMMdd"
+
+processing:
+  box_size: 20
+  delivery_types:
+    routine: ["ZPRE", "ZVE1"]
+    bonus: ["Z04", "Z05"]
+
+output:
+  base_path: "../data/processed"
+  format: "parquet"
+  mode: "overwrite"
+  partition_col: "fecha_proceso"
