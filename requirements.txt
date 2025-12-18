@@ -1,6 +1,6 @@
 pyspark==3.5.3
 pandas
 omegaconf
-pyarrow
 
-%pip install pyspark==3.5.3 pandas omegaconf pyarrow
+
+%pip install pyspark==3.5.3 pandas omegaconf
