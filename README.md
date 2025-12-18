@@ -22,7 +22,8 @@ caso-ingenieria-de-datos/
 ```
 # Entorno de Desarrollo y Dependencias
 La solución fue desarrollada de forma local y probada exitosamente en el siguiente entorno de un Notebook de Jupyter en Visual Studio Code:
-
+ 
+ **Las Librerias utilizadas fueron:**
 - **pyspark==** 3.5.3
 - **pandas**
 - **omegaconf**
