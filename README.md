@@ -20,8 +20,9 @@ caso-ingenieria-de-datos/
 ├── requirements.txt
 └── README.md
 ```
+# Entorno de Desarrollo y Dependencias
+La solución fue desarrollada de forma local y probada exitosamente en el siguiente entorno de un Notebook de Jupyter en Visual Studio Code:
 
-# Solución desarrollada con las siguientes librerias
 - **pyspark==** 3.5.3
 - **pandas**
 - **omegaconf**
