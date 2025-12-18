@@ -31,19 +31,23 @@ La solución fue desarrollada de forma local y probada exitosamente en el siguie
 ## Flujo de Trabajo
 ```mermaid
 graph LR
-    %% Nodos Principales
-    Bronze[Input: Datos Crudos CSV] --> ETL(Proceso ETL: Limpieza y Reglas)
+    %% Nodos de Entrada
+    Bronze[input: Datos Crudos CSV] --> ETL(Proceso ETL: Limpieza y Reglas)
+    Config[config: Configuración YAML] --> ETL
+
+    %% Flujo Principal
     ETL --> Silver[Salida: Capa Silver]
 
     %% Detalles Técnicos de la Salida
     Silver -.-> Formato[Formato: Parquet y CSV]
     Silver -.-> Estrategia[Particionado por fecha]
 
-    %% Estilos Definidos (Letra negra, Negrita, Borde grueso negro)
+    %% Estilos Definidos (Robustos: Borde negro grueso, Texto negro, Negrita)
     style Bronze fill:#f5f5f5,stroke:#000000,stroke-width:3px,color:#000000,font-weight:bold
+    style Config fill:#fff9c4,stroke:#000000,stroke-width:3px,color:#000000,font-weight:bold
     style ETL fill:#e1f5fe,stroke:#000000,stroke-width:3px,color:#000000,font-weight:bold
     style Silver fill:#e0f2f1,stroke:#000000,stroke-width:3px,color:#000000,font-weight:bold
     
-    %% Estilo para los nodos secundarios (para que también tengan letra negra)
+    %% Estilo para los nodos secundarios
     style Formato fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
     style Estrategia fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
