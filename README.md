@@ -25,4 +25,3 @@ caso-ingenieria-de-datos/
 - **pyspark==** 3.5.3
 - **pandas**
 - **omegaconf**
-- **pyarrow**
