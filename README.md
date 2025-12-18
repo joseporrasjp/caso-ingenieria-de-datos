@@ -26,3 +26,21 @@ La solución fue desarrollada de forma local y probada exitosamente en el siguie
 - **pyspark==** 3.5.3
 - **pandas**
 - **omegaconf**
+
+## Flujo de Trabajo
+
+```mermaid
+graph LR
+    %% Nodos Principales
+    Input[Entrada CSV] --> Filtro(Filtros)
+    Filtro --> Transformacion(Transformación y Limpieza)
+    Transformacion --> Salida[Generación de Archivo Parquet]
+
+    %% Detalles de Salida
+    Salida -.-> Parquet[(Parquet)]
+    Salida -.-> CSV[(CSV)]
+
+    %% Estilos simples para que se vea limpio
+    style Input fill:#fff,stroke:#333,stroke-width:2px
+    style Transformacion fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style Salida fill:#dcedc8,stroke:#33691e,stroke-width:2px
