@@ -1,2 +1,3 @@
 # caso-ingenieria-de-datos
-Para esta prueba técnica construí una solución ETL parametrizable basada en PySpark. La arquitectura utiliza OmegaConf para flexibilizar las reglas de negocio. Para resolver el desafío de la ejecución local en Windows, automaticé el paso de escritura utilizando Pandas como puente; esto me permitió evadir la configuración compleja de Hadoop y entregar los datos particionados por fecha tanto en formato Parquet como en CSV de forma eficiente.
+Para esta prueba técnica construí una solución ETL basada en PySpark. La arquitectura utiliza OmegaConf.
+Para resolver el este caso las pruebas se realizacron de forma local en Windows, automaticé el paso de escritura utilizando Pandas como puente; esto me permitió omitir el metodo Hadoop y exportar los datos por fecha tanto en formato Parquet como en CSV de forma eficiente.
