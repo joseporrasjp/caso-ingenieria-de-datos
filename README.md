@@ -2,6 +2,10 @@
 Para esta prueba técnica construí una solución ETL basada en PySpark. La arquitectura utiliza OmegaConf.
 Para resolver el este caso las pruebas se realizacron de forma local en Windows, automaticé el paso de escritura utilizando Pandas como puente; esto me permitió omitir el metodo Hadoop y exportar los datos por fecha tanto en formato Parquet como en CSV de forma eficiente.
 
+# Caso Ingeniería de Datos
+
+>  **Documentación :** Puedes consultar el informe técnico detallado en formato PDF haciendo clic aquí:  
+> [Descargar Documentación Técnica (PDF)](./Documentacion_Tecnica.pdf)
 
 # Estructura del Repositorio
 ```
